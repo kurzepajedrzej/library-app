@@ -1,0 +1,58 @@
+/* Updated Main Page Styling with Teko Font */
+
+/* Apply styles to the container */
+.container {
+    text-align: center;
+    padding: 40px; /* Increased padding for better spacing */
+}
+
+/* Style the heading with Teko font */
+h1 {
+    font-size: 48px; /* Larger font size for the heading */
+    font-family: "Teko", sans-serif; /* Use Teko font */
+    font-weight: 600; /* Adjust font weight if needed */
+    color: #007BFF; /* Heading color */
+    margin-bottom: 20px; /* Added margin for separation */
+}
+
+/* Style the paragraph with Teko font */
+p {
+    font-size: 20px; /* Larger font size for the paragraph */
+    font-family: "Teko", sans-serif; /* Use Teko font */
+    color: #333; /* Paragraph color */
+    margin-bottom: 20px; /* Added margin for separation */
+}
+
+/* Style the button */
+.btn-primary {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 15px 30px; /* Increased padding for better button size */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 18px; /* Adjusted font size for the button text */
+}
+
+/* Hover effect for the button */
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+.button-container {
+    display: flex;
+    justify-content: space-between; /* Adjust as needed for your desired spacing */
+}
+
+.button-container a {
+    text-decoration: none; /* Remove underlines from anchor links */
+}
+
+.button-container button {
+    margin: -50px 300px; /* Adjust the margin to control the space between buttons */
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
