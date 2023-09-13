@@ -18,7 +18,9 @@ Route::get('/books', [BookController::class, 'books'])->name('books');
 Route::get('/authors', [BookController::class, 'authorsWithBooks'])->name('authors');
 
 
+Route::get('/books/{title}', [BookController::class, 'show_book'])->name('books.show_book');
 
-//Route::get('/search', 'SearchController@index')->name('search');
-// Route::get('/all-books', 'BookController@index')->name('books');
+Route::get('/authors/{author}', [BookController::class, 'booksByAuthor'])->name('books_with_authors');
+
+//Route::get('/books/{title}', 'BookController@show');
 

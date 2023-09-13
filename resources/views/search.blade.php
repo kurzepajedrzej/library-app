@@ -31,11 +31,14 @@
             <h2>Search Results</h2>
             <ul class="list-group">
                 @foreach ($results as $book)
-                <li class="list-group-item">{{ $book->title }} by {{ $book->author }}</li>
+                <li class="list-group-item">
+                    <a href="{{ route('books.show_book', $book->title) }}">{{ $book->title }} by {{ $book->author }}</a>
+                </li>                
                 @endforeach
             </ul>
         </div>
         @endif
-    </div>   
+    </div> 
 </body>
 </html>
+

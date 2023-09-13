@@ -25,7 +25,9 @@
             <tbody>
                 @foreach ($authorsWithBooks as $authorData)
                     <tr>
-                        <td>{{ $authorData['author'] }}</td>
+                        <td>
+                            <a href="{{ route('books_with_authors', ['author' => $authorData['author']]) }}">{{ $authorData['author'] }}</a>
+                        </td>
                         <td>
                             <ul>
                                 @foreach ($authorData['books'] as $book)
@@ -38,6 +40,9 @@
             </tbody>
         </table>
     </div>
+    
 
 </body>
 </html>
+
+<a href="{{ route('books.show_book', $book->title) }}">{{ $book->title }} by {{ $book->author }}</a>
