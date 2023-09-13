@@ -1,0 +1,40 @@
+stages:
+  - build
+  - test
+  - deploy_staging
+  - deploy_production
+
+variables:
+  DOCKER_COMPOSE_VERSION: "1.29.2"
+
+job_build:
+  stage: build
+  script:
+    - docker-compose -f docker-compose.yml build
+  only:
+    - master  
+
+job_test:
+  stage: test
+  script:
+    - docker-compose -f docker-compose.yml run --rm laravel.test php artisan test
+
+job_deploy_staging:
+  stage: deploy_staging
+  script:
+    - docker-compose -f docker-compose.yml up -d
+  environment:
+    name: staging
+    url: https://staging.example.com
+  only:
+    - master 
+
+job_deploy_production:
+  stage: deploy_production
+  script:
+    - docker-compose -f docker-compose.yml up -d
+  environment:
+    name: production
+    url: https://example.com
+  only:
+    - tags 
